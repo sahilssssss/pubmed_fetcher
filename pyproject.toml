@@ -1,19 +1,25 @@
-[project]
-name = "pubmed-paper-fetcher"
+[tool.poetry]
+name = "pubmed-paper-fetcher-sahil"
 version = "0.1.0"
 description = ""
-authors = [
-    {name = "sahilssssss",email = "deysagar3001@gmil.com"}
-]
+authors = ["sahilssssss <deysagar3001@gmil.com>"]
 readme = "README.md"
-requires-python = ">=3.11"
-dependencies = [
-]
-
-[tool.poetry]
 packages = [{include = "pubmed_paper_fetcher", from = "src"}]
 
+[tool.poetry.dependencies]
+python = ">=3.11"
+requests = ">=2.32.3,<3.0.0"
+pandas = ">=2.2.3,<3.0.0"
+tqdm = ">=4.67.1,<5.0.0"
+
+[tool.poetry.scripts]
+get-papers-list = "pubmed_paper_fetcher.cli:main"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+flake8 = "^7.1.2"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
