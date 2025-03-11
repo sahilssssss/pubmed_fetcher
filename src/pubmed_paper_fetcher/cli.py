@@ -5,7 +5,7 @@ from pubmed_paper_fetcher.fetch_papers import fetch_papers
 from pubmed_paper_fetcher.utils import extract_company_authors
 from pubmed_paper_fetcher.constants import DEFAULT_CSV_FILENAME, CSV_HEADERS
 
-# logging configuration
+# logging configurations
 
 logging.basicConfig(level=logging.INFO)
 
@@ -43,7 +43,7 @@ def main():
             corresponding_email
         ])
 
-    # Save results to CSV file
+    # Saving results to CSV file
     output_file = args.file if args.file else DEFAULT_CSV_FILENAME
     save_to_csv(results, output_file)
     logging.info(f"Results saved to {output_file}")
