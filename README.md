@@ -80,17 +80,17 @@ The tool generates a CSV file with the following columns:
 ```
 pubmed-paper-fetcher/
 ├── src/pubmed_paper_fetcher/
-│   ├── __init__.py       # Package initialization
-│   ├── cli.py            # Command-line interface
-│   ├── fetch_papers.py   # PubMed API interaction
-│   ├── constants.py      # Project constants
-│   └── utils.py          # Helper functions
+│   ├── __init__.py             # Package initialization
+│   ├── cli.py                  # Command-line interface
+│   ├── fetch_papers.py         # PubMed API interaction
+│   ├── constants.py            # Project constants
+│   └── utils.py                # Helper functions
 ├── tests/
-│   ├── test_cli.py       # CLI tests
-│   ├── test_fetch_papers.py  # API interaction tests
-│   └── test_utils.py     # Utility function tests
-├── .env                  # Environment variables (not tracked in git)
-└── pyproject.toml        # Poetry configuration
+│   ├── test_cli.py             # CLI tests
+│   ├── test_fetch_papers.py    # API interaction tests
+│   └── test_utils.py           # Utility function tests
+├── .env                        # Environment variables (not tracked in git)
+└── pyproject.toml              # Poetry configuration
 ```
 
 ## 🛠️ Dependencies
