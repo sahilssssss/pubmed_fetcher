@@ -3,7 +3,7 @@ from pubmed_paper_fetcher.fetch_papers import fetch_papers
 from pubmed_paper_fetcher.constants import DEFAULT_MAX_RESULTS
 
 def test_fetch_papers_basic():
-    """Test fetching papers with a basic query."""
+    """Test fetching papers with a basic query"""
 
     query = "blood transfusion"
     results = fetch_papers(query, max_results=5)
@@ -21,7 +21,7 @@ def test_fetch_papers_basic():
     "(stroke OR myocardial infarction) AND aspirin"
 ])
 def test_fetch_papers_with_pubmed_syntax(query):
-    """Test fetching papers using different PubMed query syntaxes."""
+    """Test fetching papers using different PubMed query syntaxes"""
     results = fetch_papers(query, max_results=3)
 
     # Check if results are returned as a list
@@ -41,7 +41,7 @@ def test_fetch_papers_with_pubmed_syntax(query):
     print(f" Passed test for query: {query}")
 
 def test_fetch_papers_no_results():
-    """Test query that returns no results."""
+    """Test query that returns no results"""
     query = "randomtextthatreturnsnothing"
     results = fetch_papers(query, max_results=5)
 
@@ -49,7 +49,7 @@ def test_fetch_papers_no_results():
     assert len(results) == 0, "No results should be returned for a nonsense query"
 
 def test_fetch_papers_max_results():
-    """Test fetching a specific number of results."""
+    """Test fetching a specific number of results"""
     query = "machine learning"
     max_results = 3
     results = fetch_papers(query, max_results=max_results)
@@ -57,7 +57,7 @@ def test_fetch_papers_max_results():
     assert len(results) == max_results, f"Should return exactly {max_results} results"
 
 def test_fetch_papers_invalid_query():
-    """Test invalid query handling (e.g., special characters)."""
+    """Test invalid query handling (e.g., special characters)"""
     query = "@#$%^&*()"
     results = fetch_papers(query, max_results=5)
 
