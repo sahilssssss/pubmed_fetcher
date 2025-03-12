@@ -130,5 +130,5 @@ pytest -v
 - [ ] Implement batch processing for large queries
 
 ## 📄 Author 
-Sahil Dey
-email:deysagar3001@gmail.com
+-Sahil Dey
+-email:deysagar3001@gmail.com
