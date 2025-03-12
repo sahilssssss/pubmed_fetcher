@@ -6,7 +6,7 @@ def extract_company_authors(authors: List[Tuple[str, str]]) -> Tuple[List[str], 
 
     Args:
         authors (List[Tuple[str, str]]): List of (author_name, affiliation).
-        
+
     Returns:
         Tuple[List[str], List[str]]: (Non-academic authors, Company affiliations)
     """
@@ -14,7 +14,8 @@ def extract_company_authors(authors: List[Tuple[str, str]]) -> Tuple[List[str], 
     company_affiliations = []
 
     for author, affiliation in authors:
-        if any(keyword.lower() in affiliation.lower() for keyword in COMPANY_KEYWORDS):
+        affiliation_clean = affiliation.strip().lower()  
+        if any(keyword.lower() in affiliation_clean for keyword in COMPANY_KEYWORDS):
             non_academic_authors.append(author)
             company_affiliations.append(affiliation)
 
