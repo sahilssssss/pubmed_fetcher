@@ -71,8 +71,8 @@ The tool generates a CSV file with the following columns:
 | PubMed ID | Unique identifier for the paper |
 | Title | Paper title |
 | Publication Date | Date of publication |
-| Non-academic Authors | Authors from industry/commercial settings |
-| Company Affiliations | Organizations associated with non-academic authors |
+| Non-academic Authors | Names of authors affiliated with non-academic institutions. |
+| Company Affiliations | Names of pharmaceutical/biotech companies. |
 | Corresponding Author Email | Contact email for the corresponding author |
 
 ## 📂 Project Structure
