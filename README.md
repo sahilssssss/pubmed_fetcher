@@ -99,12 +99,12 @@ This project is built using [Poetry](https://python-poetry.org/) for dependency 
 
 | Package | Version | Purpose | Link |
 |---------|---------|---------|------|
-| [Python](https://www.python.org/) | >=3.7 | Core programming language | https://www.python.org/ |
-| [Requests](https://docs.python-requests.org/) | ^2.28.0 | HTTP client for PubMed API calls | https://docs.python-requests.org/ |
-| [pandas](https://pandas.pydata.org/) | ^2.0.0 | Data manipulation and CSV export | https://pandas.pydata.org/ |
-| [pytest](https://docs.pytest.org/) | ^7.3.1 | Testing framework | https://docs.pytest.org/ |
-| [python-dotenv](https://pypi.org/project/python-dotenv/) | ^1.0.0 | Environment variable management | https://pypi.org/project/python-dotenv/ |
-| [argparse](https://docs.python.org/3/library/argparse.html) | stdlib | Command-line argument parsing | https://docs.python.org/3/library/argparse.html |
+| [Python](https://www.python.org/) | Core programming language | https://www.python.org/ |
+| [Requests](https://docs.python-requests.org/) | HTTP client for PubMed API calls | https://docs.python-requests.org/ |
+| [pandas](https://pandas.pydata.org/) | Data manipulation and CSV export | https://pandas.pydata.org/ |
+| [pytest](https://docs.pytest.org/) | Testing framework | https://docs.pytest.org/ |
+| [python-dotenv](https://pypi.org/project/python-dotenv/) | Environment variable management | https://pypi.org/project/python-dotenv/ |
+| [argparse](https://docs.python.org/3/library/argparse.html) | Command-line argument parsing | https://docs.python.org/3/library/argparse.html |
 
 All dependencies are automatically installed when you run `poetry install`.
 
