@@ -6,7 +6,7 @@ def extract_company_authors(authors: List[Tuple[str, str]]) -> Tuple[List[str], 
 
     Args:
         authors (List[Tuple[str, str]]): List of (author_name, affiliation).
-
+        
     Returns:
         Tuple[List[str], List[str]]: (Non-academic authors, Company affiliations)
     """
