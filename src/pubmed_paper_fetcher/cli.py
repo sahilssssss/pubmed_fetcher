@@ -5,20 +5,25 @@ from pubmed_paper_fetcher.fetch_papers import fetch_papers
 from pubmed_paper_fetcher.utils import extract_company_authors
 from pubmed_paper_fetcher.constants import DEFAULT_CSV_FILENAME, CSV_HEADERS
 
-# logging configurations
-
+# Logging configuration
 logging.basicConfig(level=logging.INFO)
 
-def save_to_csv(data,filename=DEFAULT_CSV_FILENAME):
+def save_to_csv(data, filename=DEFAULT_CSV_FILENAME):
     """Saves results to a CSV file."""
     with open(filename, "w", newline="", encoding="utf-8") as file:
         writer = csv.writer(file)
-        writer.writerow(CSV_HEADERS)
-        writer.writerows(data)
-    logging.info(f"Results saved to {filename}")
+        writer.writerow(CSV_HEADERS)  
+        writer.writerows(data)  
+    logging.info(f" Results saved to {filename}")
 
 def main():
+    # Initialize an argument parser to handle CLI inputs.
     parser = argparse.ArgumentParser(description="Fetch PubMed papers with non-academic authors.")
+
+    # - `--query` or `-q`: Required argument specifying the PubMed search query.
+    # - `--file` or `-f`: Optional argument to specify a custom CSV filename for saving results.
+    # - `--debug` or `-d`: Optional flag to enable debug mode for detailed logging.
+
     parser.add_argument("--query", "-q", required=True, help="Search query for PubMed")
     parser.add_argument("--file", "-f", help="Filename to save results as CSV")
     parser.add_argument("--debug", "-d", action="store_true", help="Enable debug mode")
@@ -30,8 +35,12 @@ def main():
     papers = fetch_papers(args.query)
     results = []
 
+    # Extract relevant details from each paper using `.get()` to avoid KeyError.
+    # If the key is missing, provide a default empty string or "Not available".
     for paper in papers:
-        non_academic_authors, company_affiliations = extract_company_authors(paper.get("authors", []))
+        
+        non_academic_authors = paper.get("Non-academic Authors", "").split(", ")
+        company_affiliations = paper.get("Company Affiliations", "").split(", ")
         corresponding_email = paper.get("Corresponding Author Email", "Not available")
 
         results.append([
@@ -43,10 +52,10 @@ def main():
             corresponding_email
         ])
 
-    # Saving results to CSV file
+    # Save results to CSV file
     output_file = args.file if args.file else DEFAULT_CSV_FILENAME
     save_to_csv(results, output_file)
-    logging.info(f"Results saved to {output_file}")
+    logging.info(f" Results saved to {output_file}")
 
 if __name__ == "__main__":
     main()
