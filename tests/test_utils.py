@@ -1,7 +1,7 @@
 from pubmed_paper_fetcher.utils import extract_company_authors
 
 def test_extract_company_authors():
-    """Test if company-affiliated authors are correctly filtered."""
+    """Test if company-affiliated authors are correctly filtered"""
     authors = [
         ("John Doe", "Harvard University"),  # Academic
         ("Alice Smith", "Biotech Corp"),    # Company
