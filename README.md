@@ -89,8 +89,8 @@ pubmed-paper-fetcher/
 │   ├── test_cli.py       # CLI tests
 │   ├── test_fetch_papers.py  # API interaction tests
 │   └── test_utils.py     # Utility function tests
-├── pyproject.toml        # Poetry configuration
-└── .env                  # Environment variables (not tracked in git)
+├── .env                  # Environment variables (not tracked in git)
+└── pyproject.toml        # Poetry configuration
 ```
 
 ## 🛠️ Dependencies
