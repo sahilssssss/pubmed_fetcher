@@ -32,7 +32,7 @@ def fetch_papers(query: str, max_results: int = 20):
 
     logging.info(f"Found {len(paper_ids)} papers. Fetching details...")
 
-    # Fetch paper details
+    # Fetch paper details..
     fetch_params = {
         "db": "pubmed",
         "id": ",".join(paper_ids),
@@ -62,7 +62,7 @@ def parse_papers_xml(xml_data: str) -> List[Dict]:
             day = pub_date_elem.find("Day")
             pub_date = f"{year.text if year is not None else ''}-{month.text if month is not None else ''}-{day.text if day is not None else ''}"
 
-        # Extract authors and affiliations
+        # Extract authors & affiliations
         authors_data = []
         corresponding_email = None
 
