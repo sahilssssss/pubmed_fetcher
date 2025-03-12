@@ -10,7 +10,7 @@ if not API_KEY:
     raise ValueError("Missing PUBMED_API_KEY! Set it in your .env file.")
 
 
-# PubMed API Endpoints
+# PubMed (API Endpoints)
 BASE_URL = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
 SEARCH_URL = f"{BASE_URL}/esearch.fcgi"  
 FETCH_URL = f"{BASE_URL}/efetch.fcgi"    
