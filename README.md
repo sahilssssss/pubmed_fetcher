@@ -129,10 +129,6 @@ pytest -v
 - [ ] Add visualization capabilities for affiliation data
 - [ ] Implement batch processing for large queries
 
-## 📄 License
-
-[License information here]
-
-## 👥 Contributing
-
-[Contribution guidelines here]
+## 📄 Author 
+Sahil Dey
+email:deysagar3001@gmail.com
