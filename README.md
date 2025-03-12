@@ -131,4 +131,4 @@ pytest -v
 
 ## 📄 Author 
 -Sahil Dey
--email:deysagar3001@gmail.com
+-deysagar3001@gmail.com
