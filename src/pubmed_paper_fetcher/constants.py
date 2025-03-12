@@ -5,9 +5,9 @@ FETCH_URL = f"{BASE_URL}/efetch.fcgi"
 
 # Keywords to Identify Non-Academic Companies
 COMPANY_KEYWORDS = [
-    "Pharma", "Biotech", "Inc.", "Ltd", "Corporation", "Laboratories",
-    "Genomics", "Therapeutics", "Biosciences", "Diagnostics", "Life Sciences",
-    "Biomedical", "Biopharma", "Research Institute", "Technologies",
+    "Pharma", "Biotech", "Inc.", "Ltd", "Corporation", "Laboratories", "Synapse",
+    "Genomics", "Therapeutics", "Biosciences", "Pathology","Diagnostics", "Life Sciences",
+    "Biomedical", "Biopharma", "Research Institute", "Technologies","Laboratory",
     "Neurosciences", "Health Solutions", "GmbH", "LLC", "S.A.", "Pvt Ltd"
 ]
 
