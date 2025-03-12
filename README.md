@@ -97,7 +97,7 @@ pubmed-paper-fetcher/
 
 This project is built using [Poetry](https://python-poetry.org/) for dependency management. The main tools and libraries used include:
 
-| Package | Version | Purpose | Link |
+| Package | Purpose | Link |
 |---------|---------|---------|------|
 | [Python](https://www.python.org/) | Core programming language | https://www.python.org/ |
 | [Requests](https://docs.python-requests.org/) | HTTP client for PubMed API calls | https://docs.python-requests.org/ |
